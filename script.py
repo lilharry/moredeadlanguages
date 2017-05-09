@@ -77,7 +77,7 @@ def run(filename):
             draw_polygons(tmp, screen, color)
             tmp = []
 
-        elif line == 'hermite' or line == 'bezier':
+        elif command[0] == 'hermite' or command[0] == 'bezier':
             #print 'curve\t' + line + ": " + str(args)
             add_curve(tmp,
                       float(args[1]), float(args[2]),
@@ -89,7 +89,7 @@ def run(filename):
             draw_lines(tmp, screen, color)
             tmp = []
             
-        elif line == 'line':            
+        elif command[0] == 'line':            
             #print 'LINE\t' + str(args)
 
             add_edge( tmp,
